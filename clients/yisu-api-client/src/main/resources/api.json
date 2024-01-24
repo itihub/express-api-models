@@ -1,0 +1,1983 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "亿速(Q必达)开放API",
+    "description": "Title",
+    "version": "1.0.0"
+  },
+  "externalDocs": {
+    "description": "亿速API",
+    "url": "https://www.showdoc.com.cn/2363435479242169/10523205757405192"
+  },
+  "servers": [
+    {
+      "url": "http://api.szscsmgyl.com",
+      "description": "生产环境API服务器"
+    }
+  ],
+  "tags": [
+    {
+      "name": "寄付预收订单",
+      "description": "寄付预收订单"
+    },
+    {
+      "name": "预估运费",
+      "description": "预估运费"
+    },
+    {
+      "name": "资产信息",
+      "description": "资产信息"
+    }
+  ],
+  "paths": {
+    "/openApi/getPrice": {
+      "post": {
+        "tags": [
+          "预估运费"
+        ],
+        "summary": "获取预估运费",
+        "description": "允许商户通过此接口获取运费",
+        "externalDocs": {
+          "url": "https://www.showdoc.com.cn/2363435479242169/10523210275788510"
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/appid"
+          },
+          {
+            "$ref": "#/components/parameters/sign"
+          },
+          {
+            "$ref": "#/components/parameters/timestamp"
+          },
+          {
+            "$ref": "#/components/parameters/version"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetPriceRequest"
+              },
+              "examples": {
+                "example_name": {
+                  "$ref": "#/components/examples/GetPriceRequest"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/GetPrice"
+          }
+        }
+      }
+    },
+    "/openApi/getPriceList": {
+      "post": {
+        "tags": [
+          "预估运费"
+        ],
+        "summary": "批量查询价格",
+        "description": "可批量查询不同快递价格",
+        "externalDocs": {
+          "url": "https://www.showdoc.com.cn/2363435479242169/10523210885029276"
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/appid"
+          },
+          {
+            "$ref": "#/components/parameters/sign"
+          },
+          {
+            "$ref": "#/components/parameters/timestamp"
+          },
+          {
+            "$ref": "#/components/parameters/version"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetPriceListRequest"
+              },
+              "examples": {
+                "example request": {
+                  "$ref": ""
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/GetPriceList"
+          }
+        }
+      }
+    },
+    "/openApi/doOrder": {
+      "post": {
+        "tags": [
+          "寄付预收订单"
+        ],
+        "summary": "运单下单",
+        "description": "允许商户户通过此接口下单",
+        "externalDocs": {
+          "url": "https://www.showdoc.com.cn/2363435479242169/10523211053670655"
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/appid"
+          },
+          {
+            "$ref": "#/components/parameters/sign"
+          },
+          {
+            "$ref": "#/components/parameters/timestamp"
+          },
+          {
+            "$ref": "#/components/parameters/version"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderRequest"
+              },
+              "examples": {
+                "example request": {
+                  "$ref": "#/components/examples/OrderRequest"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/DoOrder"
+          }
+        }
+      }
+    },
+    "/openApi/getOrderDetail": {
+      "post": {
+        "tags": [
+          "寄付预收订单"
+        ],
+        "summary": "运单详情",
+        "description": "允许商户通过此接口获取运单详情",
+        "externalDocs": {
+          "url": "https://www.showdoc.com.cn/2363435479242169/10523214256647827"
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/appid"
+          },
+          {
+            "$ref": "#/components/parameters/sign"
+          },
+          {
+            "$ref": "#/components/parameters/timestamp"
+          },
+          {
+            "$ref": "#/components/parameters/version"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderInfo"
+              },
+              "examples": {
+                "example request": {
+                  "$ref": "#/components/examples/GetOrderDetailRequest"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/GetOrderDetail"
+          }
+        }
+      }
+    },
+    "/openApi/doCancel": {
+      "post": {
+        "tags": [
+          "寄付预收订单"
+        ],
+        "summary": "取消运单",
+        "description": "允许商户通过此接口取消运单",
+        "externalDocs": {
+          "url": "https://www.showdoc.com.cn/2363435479242169/10523212657042853"
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/appid"
+          },
+          {
+            "$ref": "#/components/parameters/sign"
+          },
+          {
+            "$ref": "#/components/parameters/timestamp"
+          },
+          {
+            "$ref": "#/components/parameters/version"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderInfo"
+              },
+              "examples": {
+                "example request": {
+                  "$ref": "#/components/examples/CancelOrderRequest"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Common"
+          }
+        }
+      }
+    },
+    "/openApi/doSubscribe": {
+      "post": {
+        "tags": [
+          "到付现结订单"
+        ],
+        "summary": "预约下单（京东到付）",
+        "description": "允许商户户通过此接口预约下单",
+        "externalDocs": {
+          "url": "https://www.showdoc.com.cn/2363435479242169/10523211767736313"
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/appid"
+          },
+          {
+            "$ref": "#/components/parameters/sign"
+          },
+          {
+            "$ref": "#/components/parameters/timestamp"
+          },
+          {
+            "$ref": "#/components/parameters/version"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DoSubscribe"
+              },
+              "examples": {
+                "example request": {
+                  "$ref": "#/components/examples/DoSubscribeResponse"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/DoSubscribe"
+          }
+        }
+      }
+    },
+    "/openApi/getSubscribeCode": {
+      "post": {
+        "tags": [
+          "到付现结订单"
+        ],
+        "summary": "获取验证码（京东到付）",
+        "description": "允许商户通过此接口获取验证码",
+        "externalDocs": {
+          "url": "https://www.showdoc.com.cn/2363435479242169/10523213618390356"
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/appid"
+          },
+          {
+            "$ref": "#/components/parameters/sign"
+          },
+          {
+            "$ref": "#/components/parameters/timestamp"
+          },
+          {
+            "$ref": "#/components/parameters/version"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderInfo"
+              },
+              "examples": {
+                "example request": {
+                  "$ref": "#/components/examples/GetSubscribeCodeRequest"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/GetSubscribeCode"
+          }
+        }
+      }
+    },
+    "/openApi/getSubscribeOrderDetail": {
+      "post": {
+        "tags": [
+          "到付现结订单"
+        ],
+        "summary": "退货到付运单详情（京东到付）",
+        "description": "允许商户通过此接口获取退货到付运单详情",
+        "externalDocs": {
+          "url": "https://www.showdoc.com.cn/2363435479242169/10523214995152351"
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/appid"
+          },
+          {
+            "$ref": "#/components/parameters/sign"
+          },
+          {
+            "$ref": "#/components/parameters/timestamp"
+          },
+          {
+            "$ref": "#/components/parameters/version"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderInfo"
+              },
+              "examples": {
+                "example request": {
+                  "$ref": "#/components/examples/GetSubscribeOrderDetailRequest"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/GetSubscribeOrderDetail"
+          }
+        }
+      }
+    },
+    "/openApi/fund": {
+      "post": {
+        "tags": [
+          "资产信息"
+        ],
+        "summary": "资金信息",
+        "description": "允许商户通过此接口获取资金信息",
+        "externalDocs": {
+          "url": "https://www.showdoc.com.cn/2363435479242169/10523215097806502"
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/appid"
+          },
+          {
+            "$ref": "#/components/parameters/sign"
+          },
+          {
+            "$ref": "#/components/parameters/timestamp"
+          },
+          {
+            "$ref": "#/components/parameters/version"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Fund"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "parameters": {
+      "appid": {
+        "name": "appid",
+        "in": "header",
+        "description": "商户appid",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "sign": {
+        "name": "sign",
+        "in": "header",
+        "description": "加密签名 详见签名规则",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "timestamp": {
+        "name": "timestamp",
+        "in": "header",
+        "description": "时间戳 毫秒值 请求6分钟内有效",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "version": {
+        "name": "version",
+        "in": "header",
+        "description": "接口版本，如无特殊要求统一默认”V1.0”",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      }
+    },
+    "schemas": {
+      "DoSubscribe": {
+        "type": "object",
+        "properties": {
+          "productCode": {
+            "description": "产品编号（固定37）",
+            "type": "string",
+            "required": "true"
+          },
+          "thirdOrderNo": {
+            "description": "商户订单单号",
+            "type": "string",
+            "required": "true"
+          },
+          "waybillNo": {
+            "description": "运单号",
+            "type": "string",
+            "required": "true"
+          },
+          "money": {
+            "description": "此单运费（运费不能低于10）",
+            "type": "number",
+            "required": "true"
+          },
+          "mobile": {
+            "description": "收件人手机号",
+            "type": "string",
+            "required": "true"
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer"
+          },
+          "msg": {
+            "type": "string"
+          }
+        }
+      },
+      "FundInfo": {
+        "type": "object",
+        "properties": {
+          "balance": {
+            "description": "会员钱包",
+            "type": "number"
+          },
+          "commission": {
+            "description": "推广费",
+            "type": "number"
+          },
+          "integral": {
+            "description": "积分",
+            "type": "number"
+          }
+        }
+      },
+      "GetPriceListRequest": {
+        "type": "object",
+        "required": ["sendPhone"],
+        "properties": {
+          "sendPhone": {
+            "description": "寄件人手机号",
+            "type": "string",
+            "required": "true"
+          },
+          "sendAddress": {
+            "description": "寄件人地址",
+            "type": "string",
+            "required": "true"
+          },
+          "receiveAddress": {
+            "description": "收件人地址",
+            "type": "string",
+            "required": "true"
+          },
+          "weight": {
+            "description": "下单重量",
+            "type": "integer",
+            "required": "true"
+          },
+          "packageNum": {
+            "description": "包裹数",
+            "type": "integer",
+            "required": "true"
+          },
+          "goodsValue": {
+            "description": "保价金额",
+            "type": "integer",
+            "required": "false"
+          },
+          "length": {
+            "description": "长(厘米)",
+            "type": "integer",
+            "required": "false"
+          },
+          "width": {
+            "description": "宽(厘米)",
+            "type": "integer",
+            "required": "false"
+          },
+          "height": {
+            "description": "高(厘米)",
+            "type": "integer",
+            "required": "false"
+          },
+          "payMethod": {
+            "description": "支付方式(默认3) 线下寄付:1 线下到付:2 线上寄付:3",
+            "type": "integer",
+            "enum": [
+              1,
+              2,
+              3
+            ],
+            "required": "false"
+          },
+          "volume": {
+            "description": "总体积m³ 和长宽高换算的体积做比较，使用较大的值",
+            "type": "number",
+            "required": "false"
+          },
+          "goods": {
+            "description": "品名",
+            "type": "string",
+            "required": "false"
+          },
+          "productList": {
+            "description": "快递产品列表",
+            "type": "array",
+            "required": "false",
+            "items": {
+              "type": "object",
+              "properties": {
+                "productCode": {
+                  "description": "产品编号 优先级高于type+deliveryType+promiseTimeType+payMethod组合，必填其一",
+                  "type": "integer",
+                  "required": "false"
+                },
+                "type": {
+                  "description": "详见快递产品列表",
+                  "type": "integer",
+                  "required": "false"
+                },
+                "deliveryType": {
+                  "description": "当type=3/4/11时，必传 详见快递产品列表",
+                  "type": "integer",
+                  "required": "false"
+                },
+                "promiseTimeType": {
+                  "description": "当type=1/2/3/4/8/9/10/11时，必传 详见快递产品列表",
+                  "type": "integer",
+                  "required": "false"
+                }
+              }
+            }
+          }
+        }
+      },
+      "GetPriceRequest": {
+        "type": "object",
+        "properties": {
+          "productCode": {
+            "description": "产品编号 优先级高于type+deliveryType+promiseTimeType+payMethod组合，必填其一",
+            "type": "integer",
+            "required": "false"
+          },
+          "type": {
+            "description": "详见快递产品列表",
+            "type": "integer",
+            "required": "false"
+          },
+          "deliveryType": {
+            "description": "当type=3/4/11时，必传 详见快递产品列表",
+            "type": "integer",
+            "required": "false"
+          },
+          "promiseTimeType": {
+            "description": "当type=1/2/3/4/8/9/10/11时，必传 详见快递产品列表",
+            "type": "integer",
+            "required": "false"
+          },
+          "sendPhone": {
+            "description": "寄件人手机号",
+            "type": "string",
+            "required": "true"
+          },
+          "sendAddress": {
+            "description": "寄件人地址",
+            "type": "string",
+            "required": "true"
+          },
+          "receiveAddress": {
+            "description": "收件人地址",
+            "type": "string",
+            "required": "true"
+          },
+          "weight": {
+            "description": "下单重量",
+            "type": "integer",
+            "required": "true"
+          },
+          "packageNum": {
+            "description": "包裹数",
+            "type": "integer",
+            "required": "true"
+          },
+          "goodsValue": {
+            "description": "保价金额",
+            "type": "integer",
+            "required": "false"
+          },
+          "length": {
+            "description": "长(厘米)",
+            "type": "integer",
+            "required": "false"
+          },
+          "width": {
+            "description": "宽(厘米)",
+            "type": "integer",
+            "required": "false"
+          },
+          "height": {
+            "description": "高(厘米)",
+            "type": "integer",
+            "required": "false"
+          },
+          "payMethod": {
+            "description": "支付方式(默认3) 线下寄付:1 线下到付:2 线上寄付:3",
+            "type": "integer",
+            "enum": [
+              1,
+              2,
+              3
+            ],
+            "required": "false"
+          },
+          "volume": {
+            "description": "总体积m³ 和长宽高换算的体积做比较，使用较大的值",
+            "type": "number",
+            "required": "false"
+          },
+          "goods": {
+            "description": "品名",
+            "type": "string",
+            "required": "false"
+          }
+        }
+      },
+      "GetPriceResponse": {
+        "type": "object",
+        "properties": {
+          "channelFee": {
+            "description": "基础运费",
+            "type": "number"
+          },
+          "serviceCharge": {
+            "description": "服务费",
+            "type": "number"
+          },
+          "originalFee": {
+            "description": "官方原价(折扣渠道必传)",
+            "type": "number"
+          },
+          "guarantFee": {
+            "description": "保价费用 ，根据保价金额，自动计算",
+            "type": "number"
+          },
+          "type": {
+            "description": "详见快递列表",
+            "type": "integer"
+          },
+          "typeName": {
+            "description": "快递名称",
+            "type": "string"
+          },
+          "isInsured": {
+            "description": "是否可以保价",
+            "type": "boolean"
+          },
+          "channelName": {
+            "description": "渠道名称",
+            "type": "string"
+          },
+          "bulk": {
+            "description": "体积抛比",
+            "type": "integer"
+          },
+          "limitWeight": {
+            "description": "限重",
+            "type": "integer"
+          },
+          "genre": {
+            "description": "1.通票 2.折扣 3.抽水 4.返现（寄付、到付）",
+            "type": "integer",
+            "enum": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "priceA": {
+            "description": "首重价格",
+            "type": "number"
+          },
+          "priceB": {
+            "description": "续重价格",
+            "type": "number"
+          },
+          "discount": {
+            "description": "折扣",
+            "type": "number"
+          },
+          "incrementFee": {
+            "description": "增值服务费",
+            "type": "number"
+          },
+          "volume": {
+            "description": "体积 立方厘米",
+            "type": "number"
+          },
+          "volumeWeight": {
+            "description": "体积重量",
+            "type": "integer"
+          },
+          "billWeight": {
+            "description": "计费重量",
+            "type": "integer"
+          },
+          "productCode": {
+            "description": "产品编号",
+            "type": "integer"
+          },
+          "promiseTimeType": {
+            "description": "快递列表",
+            "type": "integer"
+          },
+          "deliveryType": {
+            "description": "产品类型",
+            "type": "integer"
+          }
+        }
+      },
+      "OrderDetail": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "description": "详见快递列表",
+            "type": "string"
+          },
+          "goods": {
+            "description": "物品信息",
+            "type": "string"
+          },
+          "packageNum": {
+            "description": "包裹数",
+            "type": "integer"
+          },
+          "volume": {
+            "description": "体积(立方厘米)",
+            "type": "integer"
+          },
+          "volumeWeight": {
+            "description": "体积重量",
+            "type": "number"
+          },
+          "volumeRemark": {
+            "description": "体积说明",
+            "type": "string"
+          },
+          "weight": {
+            "description": "下单重量",
+            "type": "number"
+          },
+          "weightActual": {
+            "description": "实际重量",
+            "type": "number"
+          },
+          "weightBill": {
+            "description": "计费重量",
+            "type": "number"
+          },
+          "insuranceFee": {
+            "description": "保价费",
+            "type": "number"
+          },
+          "consumeFee": {
+            "description": "包装费",
+            "type": "number"
+          },
+          "overWeightStatus": {
+            "description": "超重状态 0未超重 1超重/耗材/保价/转寄/加长 2超重/耗材/保价/转寄/加长已处理 3超轻 4重量异常",
+            "type": "integer",
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "changeFee": {
+            "description": "转寄费",
+            "type": "number"
+          },
+          "otherFee": {
+            "description": "其他费",
+            "type": "number"
+          },
+          "incrementFee": {
+            "description": "增值服务费",
+            "type": "number"
+          },
+          "serviceCharge": {
+            "description": "技术服务费",
+            "type": "number"
+          },
+          "senderName": {
+            "description": "寄件人姓名",
+            "type": "string"
+          },
+          "sendPhone": {
+            "description": "寄件人手机号",
+            "type": "string"
+          },
+          "sendAddress": {
+            "description": "寄件人地址",
+            "type": "string"
+          },
+          "receiveName": {
+            "description": "收件人姓名",
+            "type": "string"
+          },
+          "receivePhone": {
+            "description": "收件人手机号",
+            "type": "string"
+          },
+          "receiveAddress": {
+            "description": "收件人地址",
+            "type": "string"
+          },
+          "soliciter": {
+            "description": "快递员信息",
+            "type": "object"
+          },
+          "guaranteeValueAmount": {
+            "description": "报价金额",
+            "type": "number"
+          },
+          "createDate": {
+            "description": "下单时间",
+            "type": "string"
+          },
+          "status": {
+            "description": "订单状态 0：预下单 1：待取件 2：运输中 5：已签收 6：取消订单 7：终止揽收 8：特殊关闭 9：已退款",
+            "type": "integer",
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          "statusName": {
+            "description": "订单状态描述",
+            "type": "string"
+          },
+          "isForward": {
+            "description": "是否转寄单(转寄单额外收取50%运费)",
+            "type": "boolean"
+          },
+          "isLimit": {
+            "description": "是否超限",
+            "type": "string"
+          },
+          "copyText": {
+            "description": "复制内容",
+            "type": "string"
+          },
+          "originalFee": {
+            "description": "官方原价",
+            "type": "number"
+          },
+          "images": {
+            "description": "运单图片",
+            "type": "string"
+          },
+          "payFee": {
+            "description": "实际支付费用",
+            "type": "number"
+          },
+          "orderCode": {
+            "description": "平台订单号",
+            "type": "string"
+          },
+          "payMethod": {
+            "description": "支付方式 1：线下寄付 2：线下到付 3：线上寄付",
+            "type": "integer",
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "payType": {
+            "description": "付款方式 1：余额支付 2：微信支付 3：支付宝支付 4：微信分",
+            "type": "integer",
+            "enum": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "payMethodName": {
+            "description": "支付方式名称",
+            "type": "string"
+          },
+          "trackingNum": {
+            "description": "运单号",
+            "type": "string"
+          },
+          "senderCity": {
+            "description": "寄件城市",
+            "type": "string"
+          },
+          "receiveCity": {
+            "description": "收件城市",
+            "type": "string"
+          },
+          "traceList": {
+            "description": "轨迹列表",
+            "type": "array",
+            "items": {
+              "properties": {
+                "opeRemark": {
+                  "description": "轨迹内容",
+                  "type": "string"
+                },
+                "opeTime": {
+                  "description": "轨迹时间 MM-dd HH:mm",
+                  "type": "string"
+                },
+                "opeTimeAll": {
+                  "description": "轨迹时间 yyyy-MM-dd HH:mm:ss",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "OrderInfo": {
+        "type": "object",
+        "properties": {
+          "genre": {
+            "description": "固定值 1取消。取消运单必填",
+            "type": "integer"
+          },
+          "thirdOrderNo": {
+            "description": "商户系统内部订单号 三选一",
+            "type": "string",
+            "required": "false"
+          },
+          "waybillNo": {
+            "description": "快递运单号 三选一",
+            "type": "string",
+            "required": "false"
+          },
+          "orderNo": {
+            "description": "平台订单号 三选一",
+            "type": "string",
+            "required": "false"
+          }
+        }
+      },
+      "OrderRequest": {
+        "type": "object",
+        "properties": {
+          "productCode": {
+            "description": "产品编号 优先级高于type+deliveryType+promiseTimeType+payMethod组合，必填其一",
+            "type": "integer",
+            "required": "false"
+          },
+          "type": {
+            "description": "详见快递产品列表",
+            "type": "integer",
+            "required": "false"
+          },
+          "deliveryType": {
+            "description": "当type=3/4/11时，必传 详见快递产品列表",
+            "type": "integer",
+            "required": "false"
+          },
+          "promiseTimeType": {
+            "description": "当type=1/2/3/4/8/9/10/11时，必传 详见快递产品列表",
+            "type": "integer",
+            "required": "false"
+          },
+          "senderName": {
+            "description": "寄件人姓名",
+            "type": "string",
+            "required": "true"
+          },
+          "sendPhone": {
+            "description": "寄件人手机号",
+            "type": "string",
+            "required": "true"
+          },
+          "sendAddress": {
+            "description": "寄件人地址",
+            "type": "string",
+            "required": "true"
+          },
+          "receiveName": {
+            "description": "收件人姓名",
+            "type": "string",
+            "required": "true"
+          },
+          "receivePhone": {
+            "description": "收件人手机号",
+            "type": "string",
+            "required": "true"
+          },
+          "receiveAddress": {
+            "description": "收件人地址",
+            "type": "string",
+            "required": "true"
+          },
+          "goods": {
+            "description": "物品信息",
+            "type": "string",
+            "required": "true"
+          },
+          "weight": {
+            "description": "下单重量(kg)",
+            "type": "integer",
+            "required": "true"
+          },
+          "packageNum": {
+            "description": "包裹数",
+            "type": "integer",
+            "required": "true"
+          },
+          "guaranteeValueAmount": {
+            "description": "保价金额(元)",
+            "type": "integer",
+            "required": "false"
+          },
+          "length": {
+            "description": "长(厘米)",
+            "type": "integer",
+            "required": "false"
+          },
+          "width": {
+            "description": "宽(厘米)",
+            "type": "integer",
+            "required": "false"
+          },
+          "height": {
+            "description": "高(厘米)",
+            "type": "integer",
+            "required": "false"
+          },
+          "payMethod": {
+            "description": "支付方式(默认3) 线下寄付:1 线下到付:2 线上寄付:3",
+            "type": "integer",
+            "required": "false",
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "remark": {
+            "description": "运单备注",
+            "type": "string",
+            "required": "false"
+          },
+          "thirdOrderNo": {
+            "description": "商户系统内部订单号",
+            "type": "string",
+            "required": "true"
+          },
+          "orderSendTime": {
+            "description": "预约时间yyyy-MM-dd HH:mm:ss",
+            "type": "string",
+            "required": "false"
+          },
+          "volume": {
+            "description": "总体积m³ 和长宽高换算的体积做比较，使用较大的值",
+            "type": "number",
+            "required": "false"
+          },
+          "images": {
+            "description": "包裹图片url.多张图片使用英文逗号分隔 中通快运、百世快运、顺心捷达强制输入",
+            "type": "string",
+            "required": "false"
+          },
+          "addressId": {
+            "description": "得物地址id 下单得物必传 详见得物地址",
+            "type": "number",
+            "required": "false"
+          },
+          "shipMethod": {
+            "description": "德邦物流：0：送货(不含上楼)；1：送货上楼 顺心捷达；111：送货上楼(无电梯)； 112：自提； 339：送货上楼(有电梯)； 554：送货(不含上楼)",
+            "type": "number",
+            "required": "false",
+            "enum": [
+              0,
+              1,
+              111,
+              112,
+              339,
+              554
+            ]
+          }
+        }
+      },
+      "OrderResponse": {
+        "type": "object",
+        "properties": {
+          "orderNo": {
+            "description": "平台订单号",
+            "type": "string"
+          },
+          "typeName": {
+            "description": "快递名称",
+            "type": "string"
+          },
+          "type": {
+            "description": "详见快递列表",
+            "type": "integer"
+          },
+          "waybillNo": {
+            "description": "快递运单号 部分快递不会马上返回 将通过推送通知",
+            "type": "string"
+          }
+        }
+      },
+      "SubscribeOrderDetail": {
+        "type": "object",
+        "properties": {
+          "orderNo": {
+            "description": "平台订单号",
+            "type": "string"
+          },
+          "thirdOrderNo": {
+            "description": "第三方订单号",
+            "type": "string"
+          },
+          "waybillNo": {
+            "description": "快递运单号",
+            "type": "string"
+          },
+          "senderCity": {
+            "description": "寄件城市（默认：参照存根）",
+            "type": "string"
+          },
+          "receiveCity": {
+            "description": "收件城市（默认：参照存根）",
+            "type": "string"
+          },
+          "senderName": {
+            "description": "寄件姓名",
+            "type": "string"
+          },
+          "receiveName": {
+            "description": "收件姓名",
+            "type": "string"
+          },
+          "monthCode": {
+            "description": "月结编号",
+            "type": "string"
+          },
+          "monthMobile": {
+            "description": "月结手机号",
+            "type": "string"
+          },
+          "monthVerification": {
+            "description": "验证码",
+            "type": "string"
+          },
+          "isCancel": {
+            "description": "取消1可0否",
+            "type": "string",
+            "enum": [
+              0,
+              1
+            ]
+          },
+          "createDate": {
+            "description": "识别时间",
+            "type": "string"
+          },
+          "codeDate": {
+            "description": "验证码接收时间",
+            "type": "string"
+          },
+          "subscribeDate": {
+            "description": "预约时间",
+            "type": "string"
+          },
+          "genre": {
+            "description": "1京东",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "responses": {
+      "Common": {
+        "description": "200响应",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "description": "状态码",
+                  "type": "integer"
+                },
+                "msg": {
+                  "description": "消息",
+                  "type": "string"
+                }
+              }
+            },
+            "examples": {
+              "success": {
+                "summary": "成功响应示例",
+                "$ref": "#/components/examples/SuccessResponse"
+              },
+              "failure": {
+                "summary": "失败响应示例",
+                "$ref": "#/components/examples/FailureResponse"
+              }
+            }
+          }
+        }
+      },
+      "DoOrder": {
+        "description": "200响应",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "description": "状态码",
+                  "type": "integer"
+                },
+                "msg": {
+                  "description": "消息",
+                  "type": "string"
+                },
+                "data": {
+                  "$ref": "#/components/schemas/OrderResponse"
+                }
+              }
+            },
+            "examples": {
+              "success": {
+                "summary": "成功响应示例",
+                "$ref": "#/components/examples/OrderResponse"
+              },
+              "failure": {
+                "summary": "失败响应示例",
+                "$ref": "#/components/examples/FailureResponse"
+              }
+            }
+          }
+        }
+      },
+      "DoSubscribe": {
+        "description": "200响应",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "description": "状态码",
+                  "type": "integer"
+                },
+                "msg": {
+                  "description": "消息",
+                  "type": "string"
+                },
+                "data": {
+                  "$ref": "#/components/schemas/DoSubscribe"
+                }
+              }
+            },
+            "examples": {
+              "success": {
+                "summary": "成功响应示例",
+                "$ref": "#/components/examples/DoSubscribeResponse"
+              },
+              "failure": {
+                "summary": "失败响应示例",
+                "$ref": "#/components/examples/FailureResponse"
+              }
+            }
+          }
+        }
+      },
+      "Failure": {
+        "description": "失败响应",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "description": "状态码",
+                  "type": "integer"
+                },
+                "msg": {
+                  "description": "消息",
+                  "type": "string"
+                }
+              }
+            },
+            "examples": {
+              "failure": {
+                "summary": "失败响应示例",
+                "$ref": "#/components/examples/FailureResponse"
+              }
+            }
+          }
+        }
+      },
+      "Fund": {
+        "description": "200响应",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "description": "状态码",
+                  "type": "integer"
+                },
+                "msg": {
+                  "description": "消息",
+                  "type": "string"
+                },
+                "data": {
+                  "$ref": "#/components/schemas/FundInfo"
+                }
+              }
+            },
+            "examples": {
+              "success": {
+                "summary": "成功响应示例",
+                "$ref": "#/components/examples/FundResponse"
+              },
+              "failure": {
+                "summary": "失败响应示例",
+                "$ref": "#/components/examples/FailureResponse"
+              }
+            }
+          }
+        }
+      },
+      "GetOrderDetail": {
+        "description": "200响应",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "description": "状态码",
+                  "type": "integer"
+                },
+                "msg": {
+                  "description": "消息",
+                  "type": "string"
+                },
+                "data": {
+                  "$ref": "#/components/schemas/OrderDetail"
+                }
+              }
+            },
+            "examples": {
+              "success": {
+                "summary": "成功响应示例",
+                "$ref": "#/components/examples/GetOrderDetailResponse"
+              },
+              "failure": {
+                "summary": "失败响应示例",
+                "$ref": "#/components/examples/FailureResponse"
+              }
+            }
+          }
+        }
+      },
+      "GetPrice": {
+        "description": "200响应",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "description": "状态码",
+                  "type": "integer"
+                },
+                "msg": {
+                  "description": "消息",
+                  "type": "string"
+                },
+                "data": {
+                  "$ref": "#/components/schemas/GetPriceResponse"
+                }
+              }
+            },
+            "examples": {
+              "success": {
+                "summary": "成功响应示例",
+                "$ref": "#/components/examples/GetPriceResponse"
+              },
+              "failure": {
+                "summary": "失败响应示例",
+                "$ref": "#/components/examples/FailureResponse"
+              }
+            }
+          }
+        }
+      },
+      "GetPriceList": {
+        "description": "200响应",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "description": "状态码",
+                  "type": "integer"
+                },
+                "msg": {
+                  "description": "消息",
+                  "type": "string"
+                },
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetPriceResponse"
+                  }
+                }
+              }
+            },
+            "examples": {
+              "success": {
+                "summary": "成功响应示例",
+                "$ref": "#/components/examples/GetPriceListResponse"
+              },
+              "failure": {
+                "summary": "失败响应示例",
+                "$ref": "#/components/examples/FailureResponse"
+              }
+            }
+          }
+        }
+      },
+      "GetSubscribeCode": {
+        "description": "200响应",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "description": "状态码",
+                  "type": "integer"
+                },
+                "msg": {
+                  "description": "消息",
+                  "type": "string"
+                },
+                "data": {
+                  "description": "验证码",
+                  "type": "string"
+                }
+              }
+            },
+            "examples": {
+              "success": {
+                "summary": "成功响应示例",
+                "$ref": "#/components/examples/GetSubscribeCodeResponse"
+              },
+              "failure": {
+                "summary": "失败响应示例",
+                "$ref": "#/components/examples/FailureResponse"
+              }
+            }
+          }
+        }
+      },
+      "GetSubscribeOrderDetail": {
+        "description": "200响应",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "description": "状态码",
+                  "type": "integer"
+                },
+                "msg": {
+                  "description": "消息",
+                  "type": "string"
+                },
+                "data": {
+                  "$ref": "#/components/schemas/SubscribeOrderDetail"
+                }
+              }
+            },
+            "examples": {
+              "success": {
+                "summary": "成功响应示例",
+                "$ref": "#/components/examples/GetSubscribeOrderDetailResponse"
+              },
+              "failure": {
+                "summary": "失败响应示例",
+                "$ref": "#/components/examples/FailureResponse"
+              }
+            }
+          }
+        }
+      }
+    },
+    "examples": {
+      "CancelOrderRequest": {
+        "value": {
+          "genre": 1,
+          "thirdOrderNo": "1217752501201407033233368018"
+        }
+      },
+      "DoSubscribeRequest": {
+        "value": {
+          "productCode": 37,
+          "thirdOrderNo": "1217752501201407031113368022",
+          "waybillNo": "TEST167653737517300",
+          "money": 10,
+          "mobile": "13599999999"
+        }
+      },
+      "DoSubscribeResponse": {
+        "value": {
+          "code": 0,
+          "msg": "成功",
+          "data": {
+            "orderNo": "JDKD167653737435303",
+            "typeName": "京东快递",
+            "type": 66,
+            "waybillNo": "TEST167653737517300"
+          }
+        }
+      },
+      "FailureResponse": {
+        "value": {
+          "msg": "xxxxxxx",
+          "code": 500
+        }
+      },
+      "FundResponse": {
+        "value": {
+          "code": 0,
+          "msg": "成功",
+          "data": {
+            "balance": 6.66,
+            "commission": 6.66,
+            "integral": 666
+          }
+        }
+      },
+      "GetOrderDetailRequest": {
+        "value": {
+          "thirdOrderNo": "1217752501201407033233368018"
+        }
+      },
+      "GetOrderDetailResponse": {
+        "value": {
+          "code": 0,
+          "msg": "成功",
+          "data": {
+            "type": 6,
+            "goods": "日用品",
+            "packageNum": 1,
+            "volume": 1000,
+            "volumeWeight": 0.13,
+            "volumeRemark": "立方厘米/8000",
+            "weight": 1,
+            "weightActual": 0,
+            "weightBill": 0,
+            "insuranceFee": 0,
+            "consumeFee": 0,
+            "overWeightStatus": 0,
+            "changeFee": 0,
+            "otherFee": 0,
+            "incrementFee": 0,
+            "serviceCharge": 0,
+            "senderName": "张",
+            "senderPhone": "18050000000",
+            "senderAddress": "福建省厦门市思明区软件园二期",
+            "receiveName": "张",
+            "receivePhone": "18050000000",
+            "receiveAddress": "福建省厦门市思明区软件园二期",
+            "soliciter": null,
+            "guaranteeValueAmount": 0,
+            "createDate": "2022-11-16 15:41:41",
+            "status": 1,
+            "statusName": "待取件",
+            "isForward": false,
+            "isLimit": false,
+            "yuanjia": 5.36,
+            "copyText": "运单号：TEST166858450071220\n寄件人：张(18050000000)\n地址：福建省厦门市思明区软件园二期\n收件人：张(18050000000)\n地址：福建省厦门市思明区软件园二期\n物品：日用品(1KG)，包裹数: 1\n有任何售后问题，一定要必须联系\"下单员\"进行处理，感谢您的配合!!!",
+            "originalFee": 0,
+            "images": null,
+            "payFee": 5.36,
+            "orderCode": "TEST166858450071220",
+            "payMethod": 3,
+            "payType": 1,
+            "payMethodName": "线上寄付",
+            "trackingNum": "TEST166858450071220",
+            "senderCity": "厦门市",
+            "receiveCity": "厦门市",
+            "traceList": [
+              {
+                "opeRemark": "您的订单已被收件员揽收,【北京丰台区大瓦窑经营分部】库存中",
+                "opeTime": "11-07 17:57",
+                "opeTimeAll": "2022-11-07 17:57:15"
+              },
+              {
+                "opeRemark": "运输中，离开【北京丰台区大瓦窑经营分部】，下一部门【北京丰台区万泽龙运作部】",
+                "opeTime": "11-07 18:50",
+                "opeTimeAll": "2022-11-07 18:50:55"
+              }
+            ]
+          }
+        }
+      },
+      "GetPriceListRequest": {
+        "value": {
+          "sendPhone": "18050000000",
+          "sendAddress": "福建省厦门市思明区软件园二期",
+          "receiveAddress": "福建省厦门市思明区软件园二期",
+          "packageNum": 1,
+          "goodsValue": 0,
+          "weight": 1,
+          "length": 1,
+          "width": 1,
+          "height": 1,
+          "payMethod": 3,
+          "expressType": 3,
+          "productList": [
+            {
+              "productCode": 5
+            },
+            {
+              "type": 1,
+              "deliveryType": 1,
+              "promiseTimeType": 1
+            },
+            {
+              "productCode": 2
+            },
+            {
+              "promiseTimeType": 1,
+              "type": 8
+            },
+            {
+              "type": 12
+            },
+            {
+              "deliveryType": 6,
+              "promiseTimeType": 100,
+              "type": 3
+            }
+          ]
+        }
+      },
+      "GetPriceListResponse": {
+        "value": {
+          "code": 0,
+          "msg": "成功",
+          "data": [
+            {
+              "channelFee": 9.36,
+              "serviceCharge": 0.5,
+              "originalFee": 12,
+              "guarantFee": 0,
+              "type": 8,
+              "typeName": "顺丰(标快)",
+              "isInsured": true,
+              "channelName": "SF-全国顺丰-ASDT(老)",
+              "bulk": 12000,
+              "limitWeight": 20,
+              "genre": 2,
+              "priceA": 0,
+              "priceB": 0,
+              "discount": 7.8,
+              "incrementFee": 0,
+              "volume": 1,
+              "volumeWeight": 1,
+              "billWeight": 1,
+              "productCode": 5,
+              "promiseTimeType": 1
+            },
+            {
+              "channelFee": 6.2,
+              "serviceCharge": 0,
+              "originalFee": 0,
+              "guarantFee": 0,
+              "type": 1,
+              "isInsured": true,
+              "channelName": "DX京东全国折扣A",
+              "bulk": 8000,
+              "limitWeight": 30,
+              "genre": 1,
+              "priceA": 6.2,
+              "priceB": 2.1,
+              "discount": 0,
+              "remark": "体积抛比8000，下单重量填写:体积除于抛比，实际重量中的最大值，价格与官网价格一致，请填写准确重量，以免超30kg原价处理！",
+              "incrementFee": 0,
+              "volume": 1,
+              "volumeWeight": 1,
+              "billWeight": 1,
+              "deliveryType": 6,
+              "promiseTimeType": 1
+            },
+            {
+              "type": 6,
+              "typeName": "圆通快递",
+              "remark": "查无价格",
+              "productCode": 2,
+              "promiseTimeType": 1
+            },
+            {
+              "channelFee": 9.36,
+              "serviceCharge": 0.5,
+              "originalFee": 12,
+              "guarantFee": 0,
+              "type": 8,
+              "typeName": "顺丰(标快)",
+              "isInsured": true,
+              "channelName": "SF-全国顺丰-ASDT(老)",
+              "bulk": 12000,
+              "limitWeight": 20,
+              "genre": 2,
+              "priceA": 0,
+              "priceB": 0,
+              "discount": 7.8,
+              "incrementFee": 0,
+              "volume": 1,
+              "volumeWeight": 1,
+              "billWeight": 1,
+              "promiseTimeType": 1
+            },
+            {
+              "type": 12,
+              "typeName": "中通快递",
+              "remark": "查无价格"
+            },
+            {
+              "type": 3,
+              "typeName": "京东物流(特担)",
+              "remark": "查无价格",
+              "deliveryType": 6,
+              "promiseTimeType": 100
+            }
+          ]
+        }
+      },
+      "GetPriceRequest": {
+        "value": {
+          "productCode": 5,
+          "type": 5,
+          "deliveryType": 0,
+          "promiseTimeType": 0,
+          "sendPhone": "18050000000",
+          "goods": "鞋服配",
+          "sendAddress": "福建省厦门市思明区软件园二期",
+          "receiveAddress": "福建省厦门市思明区软件园二期",
+          "weight": 5,
+          "packageNum": 1,
+          "goodsValue": 0,
+          "length": 1,
+          "width": 1,
+          "height": 1,
+          "volume": 0,
+          "payMethod": 3
+        }
+      },
+      "GetPriceResponse": {
+        "value": {
+          "code": 0,
+          "msg": "成功",
+          "data": {
+            "channelFee": 9.36,
+            "serviceCharge": 0.5,
+            "originalFee": 12,
+            "guarantFee": 0,
+            "type": 8,
+            "typeName": "顺丰(标快)",
+            "isInsured": true,
+            "channelName": "SF-全国顺丰-ASDT(老)",
+            "bulk": 12000,
+            "limitWeight": 20,
+            "genre": 2,
+            "priceA": 0,
+            "priceB": 0,
+            "discount": 7.8,
+            "incrementFee": 0,
+            "volume": 1,
+            "volumeWeight": 1,
+            "billWeight": 1,
+            "productCode": 5,
+            "promiseTimeType": 1
+          }
+        }
+      },
+      "GetSubscribeCodeRequest": {
+        "value": {
+          "waybillNo": "TEST166858450071220"
+        }
+      },
+      "GetSubscribeCodeResponse": {
+        "value": {
+          "code": 0,
+          "msg": "成功",
+          "data": "123123"
+        }
+      },
+      "GetSubscribeOrderDetailRequest": {
+        "value": {
+          "waybillNo": "TEST166858450071220"
+        }
+      },
+      "GetSubscribeOrderDetailResponse": {
+        "value": {
+          "code": 0,
+          "msg": "成功",
+          "data": {
+            "orderNo": "66168231976180511",
+            "thirdOrderNo": "1217752501201407031113368023",
+            "waybillNo": "TEST166858450071220",
+            "senderCity": "参照存根",
+            "receiveCity": "参照存根",
+            "senderName": "寄件人",
+            "receiveName": "收件人",
+            "monthCode": "010K000000",
+            "monthMobile": "13511111111;13522222222",
+            "monthVerification": "123123",
+            "isCancel": 1,
+            "createDate": "2023-04-24 15:02:41",
+            "codeDate": null,
+            "subscribeDate": "2023-04-24 15:02:42",
+            "genre": 1
+          }
+        }
+      },
+      "OrderRequest": {
+        "value": {
+          "productCode": 5,
+          "senderPhone": "13799555666",
+          "senderName": "姜先生",
+          "guaranteeValueAmount": 1000,
+          "senderAddress": "河南省驻马店市汝南县宿鸭湖街道汝宁街道湖滨新城1101",
+          "receiveAddress": "广东省广州市白云区鹤龙街道员村云尚中心603",
+          "receivePhone": "13799666888",
+          "receiveName": "小胡",
+          "goods": "1",
+          "packageNum": 1,
+          "volume": 0.054,
+          "weight": 5
+        }
+      },
+      "OrderResponse": {
+        "value": {
+          "code": 0,
+          "msg": "成功",
+          "data": {
+            "orderNo": "SFKD167653737435303",
+            "typeName": "顺丰快递",
+            "type": 8,
+            "waybillNo": "TEST167653737517300"
+          }
+        }
+      },
+      "SuccessResponse": {
+        "value": {
+          "code": 0,
+          "msg": "成功"
+        }
+      }
+    }
+  }
+}

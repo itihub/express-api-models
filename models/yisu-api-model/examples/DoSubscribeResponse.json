@@ -1,0 +1,13 @@
+{
+  "summary": "成功响应示例",
+  "value": {
+    "code": 0,
+    "msg": "成功",
+    "data": {
+      "orderNo": "JDKD167653737435303",
+      "typeName": "京东快递",
+      "type": 66,
+      "waybillNo": "TEST167653737517300"
+    }
+  }
+}

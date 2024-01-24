@@ -1,0 +1,38 @@
+{
+  "post": {
+    "tags": [
+      "到付现结订单"
+    ],
+    "summary": "预约下单（京东到付）",
+    "description": "允许商户户通过此接口预约下单",
+    "externalDocs": {
+      "url": "https://www.showdoc.com.cn/2363435479242169/10523211767736313"
+    },
+    "parameters": [
+      {"$ref": "../parameters/header/appid.json"},
+      {"$ref": "../parameters/header/sign.json"},
+      {"$ref": "../parameters/header/timestamp.json"},
+      {"$ref": "../parameters/header/version.json"}
+    ],
+    "requestBody": {
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "../schemas/DoSubscribe.json"
+          },
+          "examples": {
+            "example request": {
+              "$ref": "../examples/DoSubscribeResponse.json"
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "$ref": "../responses/DoSubscribe.json"
+      }
+    }
+  }
+}

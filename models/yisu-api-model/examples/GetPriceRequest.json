@@ -1,0 +1,20 @@
+{
+  "value": {
+    "productCode": 5,
+    "type": 5,
+    "deliveryType": 0,
+    "promiseTimeType": 0,
+    "sendPhone": "18050000000",
+    "goods": "鞋服配",
+    "sendAddress": "福建省厦门市思明区软件园二期",
+    "receiveAddress": "福建省厦门市思明区软件园二期",
+    "weight": 5,
+    "packageNum": 1,
+    "goodsValue": 0,
+    "length": 1,
+    "width": 1,
+    "height": 1,
+    "volume": 0,
+    "payMethod": 3
+  }
+}

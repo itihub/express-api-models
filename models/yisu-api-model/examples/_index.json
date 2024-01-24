@@ -1,0 +1,56 @@
+{
+  "CancelOrderRequest": {
+    "$ref": "./CancelOrderRequest.json"
+  },
+  "DoSubscribeRequest": {
+    "$ref": "./DoSubscribeRequest.json"
+  },
+  "DoSubscribeResponse": {
+    "$ref": "./DoSubscribeResponse.json"
+  },
+  "FailureResponse": {
+    "$ref": "./FailureResponse.json"
+  },
+  "FundResponse": {
+    "$ref": "./FundResponse.json"
+  },
+  "GetOrderDetailRequest": {
+    "$ref": "./GetOrderDetailRequest.json"
+  },
+  "GetOrderDetailResponse": {
+    "$ref": "./GetOrderDetailResponse.json"
+  },
+  "GetPriceListRequest": {
+    "$ref": "./GetPriceListRequest.json"
+  },
+  "GetPriceListResponse": {
+    "$ref": "./GetPriceListResponse.json"
+  },
+  "GetPriceRequest": {
+    "$ref": "./GetPriceRequest.json"
+  },
+  "GetPriceResponse": {
+    "$ref": "./GetPriceResponse.json"
+  },
+  "GetSubscribeCodeRequest": {
+    "$ref": "./GetSubscribeCodeRequest.json"
+  },
+  "GetSubscribeCodeResponse": {
+    "$ref": "./GetSubscribeCodeResponse.json"
+  },
+  "GetSubscribeOrderDetailRequest": {
+    "$ref": "./GetSubscribeOrderDetailRequest.json"
+  },
+  "GetSubscribeOrderDetailResponse": {
+    "$ref": "./GetSubscribeOrderDetailResponse.json"
+  },
+  "OrderRequest": {
+    "$ref": "./OrderRequest.json"
+  },
+  "OrderResponse": {
+    "$ref": "./OrderResponse.json"
+  },
+  "SuccessResponse": {
+    "$ref": "./SuccessResponse.json"
+  }
+}

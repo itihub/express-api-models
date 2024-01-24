@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "required": [
+    "balance",
+    "commission",
+    "integral"
+  ],
+  "properties": {
+    "balance": {
+      "description": "会员钱包",
+      "type": "number"
+    },
+    "commission": {
+      "description": "推广费",
+      "type": "number"
+    },
+    "integral": {
+      "description": "积分",
+      "type": "number"
+    }
+  }
+}

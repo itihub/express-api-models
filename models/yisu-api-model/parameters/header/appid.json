@@ -1,0 +1,9 @@
+{
+  "name": "appid",
+  "in": "header",
+  "description": "商户appid",
+  "required": true,
+  "schema": {
+    "type": "string"
+  }
+}

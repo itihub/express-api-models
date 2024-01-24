@@ -1,0 +1,62 @@
+{
+  "summary": "成功响应示例",
+  "value": {
+    "code": 0,
+    "msg": "成功",
+    "data": {
+      "type": 6,
+      "goods": "日用品",
+      "packageNum": 1,
+      "volume": 1000,
+      "volumeWeight": 0.13,
+      "volumeRemark": "立方厘米/8000",
+      "weight": 1,
+      "weightActual": 0,
+      "weightBill": 0,
+      "insuranceFee": 0,
+      "consumeFee": 0,
+      "overWeightStatus": 0,
+      "changeFee": 0,
+      "otherFee": 0,
+      "incrementFee": 0,
+      "serviceCharge": 0,
+      "senderName": "张",
+      "senderPhone": "18050000000",
+      "senderAddress": "福建省厦门市思明区软件园二期",
+      "receiveName": "张",
+      "receivePhone": "18050000000",
+      "receiveAddress": "福建省厦门市思明区软件园二期",
+      "soliciter": null,
+      "guaranteeValueAmount": 0,
+      "createDate": "2022-11-16 15:41:41",
+      "status": 1,
+      "statusName": "待取件",
+      "isForward": false,
+      "isLimit": false,
+      "yuanjia": 5.36,
+      "copyText": "运单号：TEST166858450071220\n寄件人：张(18050000000)\n地址：福建省厦门市思明区软件园二期\n收件人：张(18050000000)\n地址：福建省厦门市思明区软件园二期\n物品：日用品(1KG)，包裹数: 1\n有任何售后问题，一定要必须联系\"下单员\"进行处理，感谢您的配合!!!",
+      "originalFee": 0,
+      "images": null,
+      "payFee": 5.36,
+      "orderCode": "TEST166858450071220",
+      "payMethod": 3,
+      "payType": 1,
+      "payMethodName": "线上寄付",
+      "trackingNum": "TEST166858450071220",
+      "senderCity": "厦门市",
+      "receiveCity": "厦门市",
+      "traceList": [
+        {
+          "opeRemark": "您的订单已被收件员揽收,【北京丰台区大瓦窑经营分部】库存中",
+          "opeTime": "11-07 17:57",
+          "opeTimeAll": "2022-11-07 17:57:15"
+        },
+        {
+          "opeRemark": "运输中，离开【北京丰台区大瓦窑经营分部】，下一部门【北京丰台区万泽龙运作部】",
+          "opeTime": "11-07 18:50",
+          "opeTimeAll": "2022-11-07 18:50:55"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "sign",
+  "in": "header",
+  "description": "加密签名 详见签名规则",
+  "required": true,
+  "schema": {
+    "type": "string"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "summary": "成功响应示例",
+  "value": {
+    "code": 0,
+    "msg": "成功",
+    "data": [
+      {
+        "channelFee": 9.36,
+        "serviceCharge": 0.5,
+        "originalFee": 12,
+        "guarantFee": 0,
+        "type": 8,
+        "typeName": "顺丰(标快)",
+        "isInsured": true,
+        "channelName": "SF-全国顺丰-ASDT(老)",
+        "bulk": 12000,
+        "limitWeight": 20,
+        "genre": 2,
+        "priceA": 0,
+        "priceB": 0,
+        "discount": 7.8,
+        "incrementFee": 0,
+        "volume": 1,
+        "volumeWeight": 1,
+        "billWeight": 1,
+        "productCode": 5,
+        "promiseTimeType": 1
+      },
+      {
+        "channelFee": 6.2,
+        "serviceCharge": 0,
+        "originalFee": 0,
+        "guarantFee": 0,
+        "type": 1,
+        "isInsured": true,
+        "channelName": "DX京东全国折扣A",
+        "bulk": 8000,
+        "limitWeight": 30,
+        "genre": 1,
+        "priceA": 6.2,
+        "priceB": 2.1,
+        "discount": 0,
+        "remark": "体积抛比8000，下单重量填写:体积除于抛比，实际重量中的最大值，价格与官网价格一致，请填写准确重量，以免超30kg原价处理！",
+        "incrementFee": 0,
+        "volume": 1,
+        "volumeWeight": 1,
+        "billWeight": 1,
+        "deliveryType": 6,
+        "promiseTimeType": 1
+      },
+      {
+        "type": 6,
+        "typeName": "圆通快递",
+        "remark": "查无价格",
+        "productCode": 2,
+        "promiseTimeType": 1
+      },
+      {
+        "channelFee": 9.36,
+        "serviceCharge": 0.5,
+        "originalFee": 12,
+        "guarantFee": 0,
+        "type": 8,
+        "typeName": "顺丰(标快)",
+        "isInsured": true,
+        "channelName": "SF-全国顺丰-ASDT(老)",
+        "bulk": 12000,
+        "limitWeight": 20,
+        "genre": 2,
+        "priceA": 0,
+        "priceB": 0,
+        "discount": 7.8,
+        "incrementFee": 0,
+        "volume": 1,
+        "volumeWeight": 1,
+        "billWeight": 1,
+        "promiseTimeType": 1
+      },
+      {
+        "type": 12,
+        "typeName": "中通快递",
+        "remark": "查无价格"
+      },
+      {
+        "type": 3,
+        "typeName": "京东物流(特担)",
+        "remark": "查无价格",
+        "deliveryType": 6,
+        "promiseTimeType": 100
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "post": {
+    "tags": [
+      "到付现结订单"
+    ],
+    "summary": "获取验证码（京东到付）",
+    "description": "允许商户通过此接口获取验证码",
+    "externalDocs": {
+      "url": "https://www.showdoc.com.cn/2363435479242169/10523213618390356"
+    },
+    "parameters": [
+      {"$ref": "../parameters/header/appid.json"},
+      {"$ref": "../parameters/header/sign.json"},
+      {"$ref": "../parameters/header/timestamp.json"},
+      {"$ref": "../parameters/header/version.json"}
+    ],
+    "requestBody": {
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "../schemas/OrderInfo.json"
+          },
+          "examples": {
+            "example request": {
+              "$ref": "../examples/GetSubscribeCodeRequest.json"
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "$ref": "../responses/GetSubscribeCode.json"
+      }
+    }
+  }
+}

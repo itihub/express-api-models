@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "orderNo": {
+      "description": "平台订单号",
+      "type": "string"
+    },
+    "typeName": {
+      "description": "快递名称",
+      "type": "string"
+    },
+    "type": {
+      "description": "详见快递列表",
+      "type": "integer"
+    },
+    "waybillNo": {
+      "description": "快递运单号 部分快递不会马上返回 将通过推送通知",
+      "type": "string"
+    }
+  }
+}

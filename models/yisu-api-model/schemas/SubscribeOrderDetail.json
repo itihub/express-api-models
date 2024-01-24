@@ -1,0 +1,69 @@
+{
+  "type": "object",
+  "properties": {
+    "orderNo": {
+      "description": "平台订单号",
+      "type": "string"
+    },
+    "thirdOrderNo": {
+      "description": "第三方订单号",
+      "type": "string"
+    },
+    "waybillNo": {
+      "description": "快递运单号",
+      "type": "string"
+    },
+    "senderCity": {
+      "description": "寄件城市（默认：参照存根）",
+      "type": "string"
+    },
+    "receiveCity": {
+      "description": "收件城市（默认：参照存根）",
+      "type": "string"
+    },
+    "senderName": {
+      "description": "寄件姓名",
+      "type": "string"
+    },
+    "receiveName": {
+      "description": "收件姓名",
+      "type": "string"
+    },
+    "monthCode": {
+      "description": "月结编号",
+      "type": "string"
+    },
+    "monthMobile": {
+      "description": "月结手机号",
+      "type": "string"
+    },
+    "monthVerification": {
+      "description": "验证码",
+      "type": "string"
+    },
+    "isCancel": {
+      "description": "取消1可0否",
+      "type": "string",
+      "enum": [
+        "0",
+        "1"
+      ]
+    },
+    "createDate": {
+      "description": "识别时间",
+      "type": "string"
+    },
+    "codeDate": {
+      "description": "验证码接收时间",
+      "type": "string"
+    },
+    "subscribeDate": {
+      "description": "预约时间",
+      "type": "string"
+    },
+    "genre": {
+      "description": "1京东",
+      "type": "string"
+    }
+  }
+}

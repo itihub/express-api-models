@@ -1,0 +1,14 @@
+{
+  "appid": {
+    "$ref": "./header/appid.json"
+  },
+  "sign": {
+    "$ref": "./header/sign.json"
+  },
+  "timestamp": {
+    "$ref": "./header/timestamp.json"
+  },
+  "version": {
+    "$ref": "./header/version.json"
+  }
+}

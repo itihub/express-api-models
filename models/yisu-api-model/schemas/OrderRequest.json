@@ -1,0 +1,130 @@
+{
+  "type": "object",
+  "required": [
+    "senderName",
+    "sendPhone",
+    "sendAddress",
+    "receiveName",
+    "receivePhone",
+    "receiveAddress",
+    "goods",
+    "weight",
+    "packageNum",
+    "thirdOrderNo"
+  ],
+  "properties": {
+    "productCode": {
+      "description": "产品编号 优先级高于type+deliveryType+promiseTimeType+payMethod组合，必填其一",
+      "type": "integer"
+    },
+    "type": {
+      "description": "详见快递产品列表",
+      "type": "integer"
+    },
+    "deliveryType": {
+      "description": "当type=3/4/11时，必传 详见快递产品列表",
+      "type": "integer"
+    },
+    "promiseTimeType": {
+      "description": "当type=1/2/3/4/8/9/10/11时，必传 详见快递产品列表",
+      "type": "integer"
+    },
+    "senderName": {
+      "description": "寄件人姓名",
+      "type": "string"
+    },
+    "sendPhone": {
+      "description": "寄件人手机号",
+      "type": "string"
+    },
+    "sendAddress": {
+      "description": "寄件人地址",
+      "type": "string"
+    },
+    "receiveName": {
+      "description": "收件人姓名",
+      "type": "string"
+    },
+    "receivePhone": {
+      "description": "收件人手机号",
+      "type": "string"
+    },
+    "receiveAddress": {
+      "description": "收件人地址",
+      "type": "string"
+    },
+    "goods": {
+      "description": "物品信息",
+      "type": "string"
+    },
+    "weight": {
+      "description": "下单重量(kg)",
+      "type": "integer"
+    },
+    "packageNum": {
+      "description": "包裹数",
+      "type": "integer"
+    },
+    "guaranteeValueAmount": {
+      "description": "保价金额(元)",
+      "type": "integer"
+    },
+    "length": {
+      "description": "长(厘米)",
+      "type": "integer"
+    },
+    "width": {
+      "description": "宽(厘米)",
+      "type": "integer"
+    },
+    "height": {
+      "description": "高(厘米)",
+      "type": "integer"
+    },
+    "payMethod": {
+      "description": "支付方式(默认3) 线下寄付:1 线下到付:2 线上寄付:3",
+      "type": "integer",
+      "enum": [
+        1,
+        2,
+        3
+      ]
+    },
+    "remark": {
+      "description": "运单备注",
+      "type": "string"
+    },
+    "thirdOrderNo": {
+      "description": "商户系统内部订单号",
+      "type": "string"
+    },
+    "orderSendTime": {
+      "description": "预约时间yyyy-MM-dd HH:mm:ss",
+      "type": "string"
+    },
+    "volume": {
+      "description": "总体积m³ 和长宽高换算的体积做比较，使用较大的值",
+      "type": "number"
+    },
+    "images": {
+      "description": "包裹图片url.多张图片使用英文逗号分隔 中通快运、百世快运、顺心捷达强制输入",
+      "type": "string"
+    },
+    "addressId": {
+      "description": "得物地址id 下单得物必传 详见得物地址",
+      "type": "number"
+    },
+    "shipMethod": {
+      "description": "德邦物流：0：送货(不含上楼)；1：送货上楼 顺心捷达；111：送货上楼(无电梯)； 112：自提； 339：送货上楼(有电梯)； 554：送货(不含上楼)",
+      "type": "number",
+      "enum": [
+        0,
+        1,
+        111,
+        112,
+        339,
+        554
+      ]
+    }
+  }
+}

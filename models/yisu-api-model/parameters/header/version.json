@@ -1,0 +1,9 @@
+{
+  "name": "version",
+  "in": "header",
+  "description": "接口版本，如无特殊要求统一默认”V1.0”",
+  "required": true,
+  "schema": {
+    "type": "string"
+  }
+}

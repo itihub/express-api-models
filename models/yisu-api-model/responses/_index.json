@@ -1,0 +1,32 @@
+{
+  "Common": {
+    "$ref": "./Common.json"
+  },
+  "DoOrder": {
+    "$ref": "./DoOrder.json"
+  },
+  "DoSubscribe": {
+    "$ref": "./DoSubscribe.json"
+  },
+  "Failure": {
+    "$ref": "./Failure.json"
+  },
+  "Fund": {
+    "$ref": "./Fund.json"
+  },
+  "GetOrderDetail": {
+    "$ref": "./GetOrderDetail.json"
+  },
+  "GetPrice": {
+    "$ref": "./GetPrice.json"
+  },
+  "GetPriceList": {
+    "$ref": "./GetPriceList.json"
+  },
+  "GetSubscribeCode": {
+    "$ref": "./GetSubscribeCode.json"
+  },
+  "GetSubscribeOrderDetail": {
+    "$ref": "./GetSubscribeOrderDetail.json"
+  }
+}

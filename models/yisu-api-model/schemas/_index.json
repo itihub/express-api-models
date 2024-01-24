@@ -1,0 +1,35 @@
+{
+  "DoSubscribe": {
+    "$ref": "./DoSubscribe.json"
+  },
+  "Error": {
+    "$ref": "./Error.json"
+  },
+  "FundInfo": {
+    "$ref": "./FundInfo.json"
+  },
+  "GetPriceListRequest": {
+    "$ref": "./GetPriceListRequest.json"
+  },
+  "GetPriceRequest": {
+    "$ref": "./GetPriceRequest.json"
+  },
+  "GetPriceResponse": {
+    "$ref": "./GetPriceResponse.json"
+  },
+  "OrderDetail": {
+    "$ref": "./OrderDetail.json"
+  },
+  "OrderInfo": {
+    "$ref": "./OrderInfo.json"
+  },
+  "OrderRequest": {
+    "$ref": "./OrderRequest.json"
+  },
+  "OrderResponse": {
+    "$ref": "./OrderResponse.json"
+  },
+  "SubscribeOrderDetail": {
+    "$ref": "./SubscribeOrderDetail.json"
+  }
+}

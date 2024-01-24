@@ -1,0 +1,28 @@
+{
+  "description": "200响应",
+  "content": {
+    "application/json": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "description": "状态码",
+            "type": "integer"
+          },
+          "msg": {
+            "description": "消息",
+            "type": "string"
+          }
+        }
+      },
+      "examples": {
+        "success": {
+          "$ref": "../examples/SuccessResponse.json"
+        },
+        "failure": {
+          "$ref": "../examples/FailureResponse.json"
+        }
+      }
+    }
+  }
+}

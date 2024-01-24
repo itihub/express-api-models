@@ -1,0 +1,38 @@
+{
+  "post": {
+    "tags": [
+      "预估运费"
+    ],
+    "summary": "获取预估运费",
+    "description": "允许商户通过此接口获取运费",
+    "externalDocs": {
+      "url": "https://www.showdoc.com.cn/2363435479242169/10523210275788510"
+    },
+    "parameters": [
+      {"$ref": "../parameters/header/appid.json"},
+      {"$ref": "../parameters/header/sign.json"},
+      {"$ref": "../parameters/header/timestamp.json"},
+      {"$ref": "../parameters/header/version.json"}
+    ],
+    "requestBody": {
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "../schemas/GetPriceRequest.json"
+          },
+          "examples": {
+            "example_name": {
+              "$ref": "../examples/GetPriceRequest.json"
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "$ref": "../responses/GetPrice.json"
+      }
+    }
+  }
+}

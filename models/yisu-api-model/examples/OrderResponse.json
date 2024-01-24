@@ -1,0 +1,13 @@
+{
+  "summary": "成功响应示例",
+  "value": {
+    "code": 0,
+    "msg": "成功",
+    "data": {
+      "orderNo": "SFKD167653737435303",
+      "typeName": "顺丰快递",
+      "type": 8,
+      "waybillNo": "TEST167653737517300"
+    }
+  }
+}

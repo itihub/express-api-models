@@ -1,0 +1,95 @@
+{
+  "type": "object",
+  "properties": {
+    "channelFee": {
+      "description": "基础运费",
+      "type": "number"
+    },
+    "serviceCharge": {
+      "description": "服务费",
+      "type": "number"
+    },
+    "originalFee": {
+      "description": "官方原价(折扣渠道必传)",
+      "type": "number"
+    },
+    "guarantFee": {
+      "description": "保价费用 ，根据保价金额，自动计算",
+      "type": "number"
+    },
+    "type": {
+      "description": "详见快递列表",
+      "type": "integer"
+    },
+    "typeName": {
+      "description": "快递名称",
+      "type": "string"
+    },
+    "isInsured": {
+      "description": "是否可以保价",
+      "type": "boolean"
+    },
+    "channelName": {
+      "description": "渠道名称",
+      "type": "string"
+    },
+    "bulk": {
+      "description": "体积抛比",
+      "type": "integer"
+    },
+    "limitWeight": {
+      "description": "限重",
+      "type": "integer"
+    },
+    "genre": {
+      "description": "1.通票 2.折扣 3.抽水 4.返现（寄付、到付）",
+      "type": "integer",
+      "enum": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "priceA": {
+      "description": "首重价格",
+      "type": "number"
+    },
+    "priceB": {
+      "description": "续重价格",
+      "type": "number"
+    },
+    "discount": {
+      "description": "折扣",
+      "type": "number"
+    },
+    "incrementFee": {
+      "description": "增值服务费",
+      "type": "number"
+    },
+    "volume": {
+      "description": "体积 立方厘米",
+      "type": "number"
+    },
+    "volumeWeight": {
+      "description": "体积重量",
+      "type": "integer"
+    },
+    "billWeight": {
+      "description": "计费重量",
+      "type": "integer"
+    },
+    "productCode": {
+      "description": "产品编号",
+      "type": "integer"
+    },
+    "promiseTimeType": {
+      "description": "快递列表",
+      "type": "integer"
+    },
+    "deliveryType": {
+      "description": "产品类型",
+      "type": "integer"
+    }
+  }
+}

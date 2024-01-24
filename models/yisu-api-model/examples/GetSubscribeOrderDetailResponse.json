@@ -1,0 +1,24 @@
+{
+  "summary": "成功响应示例",
+  "value": {
+    "code": 0,
+    "msg": "成功",
+    "data": {
+      "orderNo": "66168231976180511",
+      "thirdOrderNo": "1217752501201407031113368023",
+      "waybillNo": "TEST166858450071220",
+      "senderCity": "参照存根",
+      "receiveCity": "参照存根",
+      "senderName": "寄件人",
+      "receiveName": "收件人",
+      "monthCode": "010K000000",
+      "monthMobile": "13511111111;13522222222",
+      "monthVerification": "123123",
+      "isCancel": 1,
+      "createDate": "2023-04-24 15:02:41",
+      "codeDate": null,
+      "subscribeDate": "2023-04-24 15:02:42",
+      "genre": 1
+    }
+  }
+}

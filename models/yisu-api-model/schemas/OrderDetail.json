@@ -1,0 +1,215 @@
+{
+  "type": "object",
+  "properties": {
+    "type": {
+      "description": "详见快递列表",
+      "type": "string"
+    },
+    "goods": {
+      "description": "物品信息",
+      "type": "string"
+    },
+    "packageNum": {
+      "description": "包裹数",
+      "type": "integer"
+    },
+    "volume": {
+      "description": "体积(立方厘米)",
+      "type": "integer"
+    },
+    "volumeWeight": {
+      "description": "体积重量",
+      "type": "number"
+    },
+    "volumeRemark": {
+      "description": "体积说明",
+      "type": "string"
+    },
+    "weight": {
+      "description": "下单重量",
+      "type": "number"
+    },
+    "weightActual": {
+      "description": "实际重量",
+      "type": "number"
+    },
+    "weightBill": {
+      "description": "计费重量",
+      "type": "number"
+    },
+    "insuranceFee": {
+      "description": "保价费",
+      "type": "number"
+    },
+    "consumeFee": {
+      "description": "包装费",
+      "type": "number"
+    },
+    "overWeightStatus": {
+      "description": "超重状态 0未超重 1超重/耗材/保价/转寄/加长 2超重/耗材/保价/转寄/加长已处理 3超轻 4重量异常",
+      "type": "integer",
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "changeFee": {
+      "description": "转寄费",
+      "type": "number"
+    },
+    "otherFee": {
+      "description": "其他费",
+      "type": "number"
+    },
+    "incrementFee": {
+      "description": "增值服务费",
+      "type": "number"
+    },
+    "serviceCharge": {
+      "description": "技术服务费",
+      "type": "number"
+    },
+    "senderName": {
+      "description": "寄件人姓名",
+      "type": "string"
+    },
+    "sendPhone": {
+      "description": "寄件人手机号",
+      "type": "string"
+    },
+    "sendAddress": {
+      "description": "寄件人地址",
+      "type": "string"
+    },
+    "receiveName": {
+      "description": "收件人姓名",
+      "type": "string"
+    },
+    "receivePhone": {
+      "description": "收件人手机号",
+      "type": "string"
+    },
+    "receiveAddress": {
+      "description": "收件人地址",
+      "type": "string"
+    },
+    "soliciter": {
+      "description": "快递员信息",
+      "type": "object"
+    },
+    "guaranteeValueAmount": {
+      "description": "报价金额",
+      "type": "number"
+    },
+    "createDate": {
+      "description": "下单时间",
+      "type": "string"
+    },
+    "status": {
+      "description": "订单状态 0：预下单 1：待取件 2：运输中 5：已签收 6：取消订单 7：终止揽收 8：特殊关闭 9：已退款",
+      "type": "integer",
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "statusName": {
+      "description": "订单状态描述",
+      "type": "string"
+    },
+    "isForward": {
+      "description": "是否转寄单(转寄单额外收取50%运费)",
+      "type": "boolean"
+    },
+    "isLimit": {
+      "description": "是否超限",
+      "type": "string"
+    },
+    "copyText": {
+      "description": "复制内容",
+      "type": "string"
+    },
+    "originalFee": {
+      "description": "官方原价",
+      "type": "number"
+    },
+    "images": {
+      "description": "运单图片",
+      "type": "string"
+    },
+    "payFee": {
+      "description": "实际支付费用",
+      "type": "number"
+    },
+    "orderCode": {
+      "description": "平台订单号",
+      "type": "string"
+    },
+    "payMethod": {
+      "description": "支付方式 1：线下寄付 2：线下到付 3：线上寄付",
+      "type": "integer",
+      "enum": [
+        1,
+        2,
+        3
+      ]
+    },
+    "payType": {
+      "description": "付款方式 1：余额支付 2：微信支付 3：支付宝支付 4：微信分",
+      "type": "integer",
+      "enum": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "payMethodName": {
+      "description": "支付方式名称",
+      "type": "string"
+    },
+    "trackingNum": {
+      "description": "运单号",
+      "type": "string"
+    },
+    "senderCity": {
+      "description": "寄件城市",
+      "type": "string"
+    },
+    "receiveCity": {
+      "description": "收件城市",
+      "type": "string"
+    },
+    "traceList": {
+      "description": "轨迹列表",
+      "type": "array",
+      "items": {
+        "properties": {
+          "opeRemark": {
+            "description": "轨迹内容",
+            "type": "string"
+          },
+          "opeTime": {
+            "description": "轨迹时间 MM-dd HH:mm",
+            "type": "string"
+          },
+          "opeTimeAll": {
+            "description": "轨迹时间 yyyy-MM-dd HH:mm:ss",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

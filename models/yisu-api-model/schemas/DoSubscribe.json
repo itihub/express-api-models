@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "required": [
+    "productCode",
+    "thirdOrderNo",
+    "waybillNo",
+    "money",
+    "mobile"
+  ],
+  "properties": {
+    "productCode": {
+      "description": "产品编号（固定37）",
+      "type": "string"
+    },
+    "thirdOrderNo": {
+      "description": "商户订单单号",
+      "type": "string"
+    },
+    "waybillNo": {
+      "description": "运单号",
+      "type": "string"
+    },
+    "money": {
+      "description": "此单运费（运费不能低于10）",
+      "type": "number"
+    },
+    "mobile": {
+      "description": "收件人手机号",
+      "type": "string"
+    }
+  }
+}

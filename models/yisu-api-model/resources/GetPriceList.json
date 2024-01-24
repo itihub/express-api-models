@@ -1,0 +1,38 @@
+{
+  "post": {
+    "tags": [
+      "预估运费"
+    ],
+    "summary": "批量查询价格",
+    "description": "可批量查询不同快递价格",
+    "externalDocs": {
+      "url": "https://www.showdoc.com.cn/2363435479242169/10523210885029276"
+    },
+    "parameters": [
+      {"$ref": "../parameters/header/appid.json"},
+      {"$ref": "../parameters/header/sign.json"},
+      {"$ref": "../parameters/header/timestamp.json"},
+      {"$ref": "../parameters/header/version.json"}
+    ],
+    "requestBody": {
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "../schemas/GetPriceListRequest.json"
+          },
+          "examples": {
+            "example request": {
+              "$ref": "../examples/GetPriceListRequest.json"
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "$ref": "../responses/GetPriceList.json"
+      }
+    }
+  }
+}

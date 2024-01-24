@@ -1,0 +1,38 @@
+{
+  "post": {
+    "tags": [
+      "寄付预收订单"
+    ],
+    "summary": "运单下单",
+    "description": "允许商户户通过此接口下单",
+    "externalDocs": {
+      "url": "https://www.showdoc.com.cn/2363435479242169/10523211053670655"
+    },
+    "parameters": [
+      {"$ref": "../parameters/header/appid.json"},
+      {"$ref": "../parameters/header/sign.json"},
+      {"$ref": "../parameters/header/timestamp.json"},
+      {"$ref": "../parameters/header/version.json"}
+    ],
+    "requestBody": {
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "../schemas/OrderRequest.json"
+          },
+          "examples": {
+            "example request": {
+              "$ref": "../examples/OrderRequest.json"
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "$ref": "../responses/DoOrder.json"
+      }
+    }
+  }
+}

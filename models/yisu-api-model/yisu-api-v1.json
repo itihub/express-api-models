@@ -1,0 +1,75 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "亿速(Q必达)开放API",
+    "description": "Title",
+    "version": "1.0.0"
+  },
+  "externalDocs": {
+    "description": "亿速API",
+    "url": "https://www.showdoc.com.cn/2363435479242169/10523205757405192"
+  },
+  "servers": [
+    {
+      "url": "http://api.szscsmgyl.com",
+      "description": "生产环境API服务器"
+    }
+  ],
+  "tags": [
+    {
+      "name": "寄付预收订单",
+      "description": "寄付预收订单"
+    },
+    {
+      "name": "预估运费",
+      "description": "预估运费"
+    },
+    {
+      "name": "资产信息",
+      "description": "资产信息"
+    }
+  ],
+  "paths": {
+    "/openApi/getPrice": {
+      "$ref": "./resources/GetPrice.json"
+    },
+    "/openApi/getPriceList": {
+      "$ref": "./resources/GetPriceList.json"
+    },
+    "/openApi/doOrder": {
+      "$ref": "./resources/DoOrder.json"
+    },
+    "/openApi/getOrderDetail": {
+      "$ref": "./resources/GetOrderDetail.json"
+    },
+    "/openApi/doCancel": {
+      "$ref": "./resources/DoCancel.json"
+    },
+    "/openApi/doSubscribe": {
+      "$ref": "./resources/DoSubscribe.json"
+    },
+    "/openApi/getSubscribeCode": {
+      "$ref": "./resources/GetSubscribeCode.json"
+    },
+    "/openApi/getSubscribeOrderDetail": {
+      "$ref": "./resources/GetSubscribeOrderDetail.json"
+    },
+    "/openApi/fund": {
+      "$ref": "./resources/Fund.json"
+    }
+  },
+  "components": {
+    "parameters": {
+      "$ref": "./parameters/_index.json"
+    },
+    "schemas": {
+      "$ref": "./schemas/_index.json"
+    },
+    "responses": {
+      "$ref": "./responses/_index.json"
+    },
+    "examples": {
+      "$ref": "./examples/_index.json"
+    }
+  }
+}

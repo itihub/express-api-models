@@ -1,0 +1,9 @@
+{
+  "name": "timestamp",
+  "in": "header",
+  "description": "时间戳 毫秒值 请求6分钟内有效",
+  "required": true,
+  "schema": {
+    "type": "string"
+  }
+}

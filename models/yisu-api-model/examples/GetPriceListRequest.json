@@ -1,0 +1,40 @@
+{
+  "value": {
+    "sendPhone": "18050000000",
+    "sendAddress": "福建省厦门市思明区软件园二期",
+    "receiveAddress": "福建省厦门市思明区软件园二期",
+    "packageNum": 1,
+    "goodsValue": 0,
+    "weight": 1,
+    "length": 1,
+    "width": 1,
+    "height": 1,
+    "payMethod": 3,
+    "expressType": 3,
+    "productList": [
+      {
+        "productCode": 5
+      },
+      {
+        "type": 1,
+        "deliveryType": 1,
+        "promiseTimeType": 1
+      },
+      {
+        "productCode": 2
+      },
+      {
+        "promiseTimeType": 1,
+        "type": 8
+      },
+      {
+        "type": 12
+      },
+      {
+        "deliveryType": 6,
+        "promiseTimeType": 100,
+        "type": 3
+      }
+    ]
+  }
+}

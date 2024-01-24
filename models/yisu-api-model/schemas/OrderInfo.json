@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "genre": {
+      "description": "固定值 1取消。取消运单必填",
+      "type": "integer"
+    },
+    "thirdOrderNo": {
+      "description": "商户系统内部订单号 三选一",
+      "type": "string"
+    },
+    "waybillNo": {
+      "description": "快递运单号 三选一",
+      "type": "string"
+    },
+    "orderNo": {
+      "description": "平台订单号 三选一",
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "post": {
+    "tags": [
+      "寄付预收订单"
+    ],
+    "summary": "取消运单",
+    "description": "允许商户通过此接口取消运单",
+    "externalDocs": {
+      "url": "https://www.showdoc.com.cn/2363435479242169/10523212657042853"
+    },
+    "parameters": [
+      {"$ref": "../parameters/header/appid.json"},
+      {"$ref": "../parameters/header/sign.json"},
+      {"$ref": "../parameters/header/timestamp.json"},
+      {"$ref": "../parameters/header/version.json"}
+    ],
+    "requestBody": {
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "../schemas/OrderInfo.json"
+          },
+          "examples": {
+            "example request": {
+              "$ref": "../examples/CancelOrderRequest.json"
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "$ref": "../responses/Common.json"
+      }
+    }
+  }
+}

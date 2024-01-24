@@ -1,0 +1,29 @@
+{
+  "summary": "成功响应示例",
+  "value": {
+    "code": 0,
+    "msg": "成功",
+    "data": {
+      "channelFee": 9.36,
+      "serviceCharge": 0.5,
+      "originalFee": 12,
+      "guarantFee": 0,
+      "type": 8,
+      "typeName": "顺丰(标快)",
+      "isInsured": true,
+      "channelName": "SF-全国顺丰-ASDT(老)",
+      "bulk": 12000,
+      "limitWeight": 20,
+      "genre": 2,
+      "priceA": 0,
+      "priceB": 0,
+      "discount": 7.8,
+      "incrementFee": 0,
+      "volume": 1,
+      "volumeWeight": 1,
+      "billWeight": 1,
+      "productCode": 5,
+      "promiseTimeType": 1
+    }
+  }
+}

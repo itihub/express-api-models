@@ -1,0 +1,7 @@
+{
+  "summary": "失败响应示例",
+  "value": {
+    "msg": "xxxxxxx",
+    "code": 500
+  }
+}

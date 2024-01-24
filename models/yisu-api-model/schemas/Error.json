@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "required": [
+    "code",
+    "msg"
+  ],
+  "properties": {
+    "code": {
+      "type": "integer"
+    },
+    "msg": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "value": {
+    "code": 0,
+    "msg": "成功",
+    "data": {
+      "balance": 6.66,
+      "commission": 6.66,
+      "integral": 666
+    }
+  }
+}

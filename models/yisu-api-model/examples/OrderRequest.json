@@ -1,0 +1,16 @@
+{
+  "value": {
+    "productCode": 5,
+    "senderPhone": "13799555666",
+    "senderName": "姜先生",
+    "guaranteeValueAmount": 1000,
+    "senderAddress": "河南省驻马店市汝南县宿鸭湖街道汝宁街道湖滨新城1101",
+    "receiveAddress": "广东省广州市白云区鹤龙街道员村云尚中心603",
+    "receivePhone": "13799666888",
+    "receiveName": "小胡",
+    "goods": "1",
+    "packageNum": 1,
+    "volume": 0.054,
+    "weight": 5
+  }
+}
